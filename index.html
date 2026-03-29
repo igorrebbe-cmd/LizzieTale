@@ -5675,7 +5675,414 @@ Krrfseh/8/M//fA/xo+x6H/z8z/98D/GgD//2Q=="
     </div>
   </div>
 </section>
+<style>
+#readers {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #faf8f4 0%, #ffffff 60%, #faf8f4 100%);
+}
+#readers .section-eyebrow {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fox-orange);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#readers h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--deep-green);
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+#readers h2 em {
+  font-style: italic;
+  color: var(--fox-orange);
+}
+#readers .readers-intro {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--warm-grey);
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 0.6rem;
+  line-height: 1.75;
+}
+#readers .manuscript-note {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  color: var(--warm-grey);
+  text-align: center;
+  font-style: italic;
+  opacity: 0.65;
+  margin-bottom: 2.5rem;
+}
+#readers .country-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-bottom: 3rem;
+}
+#readers .country-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--deep-green);
+  background: rgba(26, 74, 46, 0.06);
+  border: 1px solid rgba(26, 74, 46, 0.14);
+  border-radius: 100px;
+  padding: 0.28rem 0.9rem;
+}
+#readers .ornament {
+  text-align: center;
+  color: var(--fox-orange);
+  opacity: 0.35;
+  font-size: 0.85rem;
+  letter-spacing: 0.4em;
+  margin-bottom: 3rem;
+}
+#readers .reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.25rem;
+  max-width: 1080px;
+  margin: 0 auto 4.5rem;
+  padding: 0 1.5rem;
+}
+#readers .review-card {
+  background: #ffffff;
+  border: 1px solid rgba(212, 98, 42, 0.1);
+  border-radius: 14px;
+  padding: 1.6rem 1.75rem;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.05), 0 4px 20px rgba(0,0,0,0.04);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+#readers .review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.09);
+}
+#readers .review-card.featured {
+  grid-column: span 2;
+  background: linear-gradient(135deg, rgba(26,74,46,0.03) 0%, rgba(212,98,42,0.03) 100%);
+  border-color: rgba(26, 74, 46, 0.14);
+}
+@media (max-width: 660px) {
+  #readers .review-card.featured { grid-column: span 1; }
+}
+#readers .review-card.child {
+  background: linear-gradient(135deg, #fffaf5 0%, #ffffff 100%);
+  border-color: rgba(212, 98, 42, 0.15);
+}
+#readers .age-badge {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--fox-orange);
+  border-radius: 100px;
+  padding: 0.18rem 0.65rem;
+  margin-bottom: 0.85rem;
+}
+#readers .quote-open {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  line-height: 0.8;
+  color: var(--fox-orange);
+  opacity: 0.18;
+  display: block;
+  margin-bottom: -0.8rem;
+}
+#readers .quote-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.93rem;
+  line-height: 1.75;
+  color: #3a3a3a;
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+#readers .reviewer {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+#readers .reviewer-flag {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+#readers .reviewer-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.83rem;
+  font-weight: 700;
+  color: var(--deep-green);
+  margin-bottom: 0.1rem;
+}
+#readers .reviewer-role {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  color: var(--warm-grey);
+  line-height: 1.4;
+}
+#readers .school-section {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+#readers .school-card {
+  background: rgba(26, 74, 46, 0.04);
+  border: 1px solid rgba(26, 74, 46, 0.12);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+}
+#readers .school-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(26, 74, 46, 0.08);
+  border: 1px solid rgba(26, 74, 46, 0.16);
+  border-radius: 100px;
+  padding: 0.45rem 1.1rem;
+  margin-bottom: 1.25rem;
+}
+#readers .school-pill span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--deep-green);
+}
+#readers .school-quote-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--deep-green);
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+#readers .school-attribution {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  color: var(--warm-grey);
+  max-width: 480px;
+  margin: 0 auto 2rem;
+  line-height: 1.65;
+}
+#readers .drawings-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fox-orange);
+  margin-bottom: 1.25rem;
+}
+#readers .drawings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+#readers .drawing-frame {
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  border: 2px solid #ffffff;
+  outline: 1px solid rgba(0,0,0,0.06);
+  transition: transform 0.22s ease;
+  background: #f0ede8;
+}
+#readers .drawing-frame:nth-child(odd):hover  { transform: rotate(1.2deg) scale(1.04); }
+#readers .drawing-frame:nth-child(even):hover { transform: rotate(-1.2deg) scale(1.04); }
+#readers .drawing-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#readers .drawings-caption {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  color: var(--warm-grey);
+  font-style: italic;
+  opacity: 0.75;
+  margin-top: 0.5rem;
+}
+</style>
 
+<section id="readers">
+  <div class="container">
+
+    <span class="section-eyebrow">Early Readers</span>
+
+    <h2>Lizzie Meets<br>Her <em>Readers</em></h2>
+
+    <p class="readers-intro">
+      Before a single illustration was drawn, the unpublished manuscript of
+      <em>Lizzie and Her White-Tipped Tail</em> was read aloud to children
+      and families across five countries — and the response has been wonderful.
+    </p>
+
+    <p class="manuscript-note">
+      All responses below were given after hearing or reading the unpublished manuscript, prior to publication.
+    </p>
+
+    <div class="country-tags">
+      <span class="country-tag">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</span>
+      <span class="country-tag">🇬🇧 London</span>
+      <span class="country-tag">🇬🇧 Liverpool</span>
+      <span class="country-tag">🇦🇺 Melbourne</span>
+      <span class="country-tag">🇺🇸 Washington DC</span>
+      <span class="country-tag">🇪🇸 Spain</span>
+    </div>
+
+    <div class="ornament">— ✦ —</div>
+
+    <div class="reviews-grid">
+
+      <!-- FEATURED — Michael, Liverpool -->
+      <div class="review-card featured">
+        <span class="quote-open">"</span>
+        <p class="quote-body">
+          A really charming, warm story with a clear emotional heart. Lizzie's determination
+          and quiet hope come through beautifully. The painting sequence is especially engaging
+          and satisfying — my son Tony really loved that part. The imagery is strong and very
+          picture-book friendly. The message about pride and creating something of your own is
+          lovely. A thoughtful story with real potential and I can't wait to see the illustrations.
+        </p>
+        <div class="reviewer">
+          <span class="reviewer-flag">🇬🇧</span>
+          <div>
+            <div class="reviewer-name">Michael</div>
+            <div class="reviewer-role">Parent — read the unpublished manuscript to his sons Tony &amp; Shrey, age 5 · Liverpool</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colin, Melbourne -->
+      <div class="review-card">
+        <span class="quote-open">"</span>
+        <p class="quote-body">
+          I hope when it hits the shelves it will do well. London children will love it.
+        </p>
+        <div class="reviewer">
+          <span class="reviewer-flag">🇦🇺</span>
+          <div>
+            <div class="reviewer-name">Colin</div>
+            <div class="reviewer-role">Retired School Headmaster · Melbourne, Australia</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Josh, Washington DC -->
+      <div class="review-card">
+        <span class="quote-open">"</span>
+        <p class="quote-body">
+          A good lesson in holding one's head high — and a lovely story about believing
+          you belong wherever you are.
+        </p>
+        <div class="reviewer">
+          <span class="reviewer-flag">🇺🇸</span>
+          <div>
+            <div class="reviewer-name">Josh</div>
+            <div class="reviewer-role">Read the unpublished manuscript to his children · Washington DC, USA</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Noa, age 2, London -->
+      <div class="review-card child">
+        <div class="age-badge">Age 2</div>
+        <span class="quote-open">"</span>
+        <p class="quote-body">
+          Good story. Lizzie wanted her home to be beautiful.
+        </p>
+        <div class="reviewer">
+          <span class="reviewer-flag">🇬🇧</span>
+          <div>
+            <div class="reviewer-name">Noa</div>
+            <div class="reviewer-role">Age 2 · London</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marco, age 2, Spain -->
+      <div class="review-card child">
+        <div class="age-badge">Age 2</div>
+        <span class="quote-open">"</span>
+        <p class="quote-body">
+          I love Lizzie!
+        </p>
+        <div class="reviewer">
+          <span class="reviewer-flag">🇪🇸</span>
+          <div>
+            <div class="reviewer-name">Marco</div>
+            <div class="reviewer-role">Age 2 · Spain</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SCHOOL SECTION -->
+    <div class="school-section">
+      <div class="school-card">
+
+        <div class="school-pill">
+          <span>🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
+          <span>Livingston Village Primary School · Scotland</span>
+        </div>
+
+        <p class="school-quote-text">"The children loved the story."</p>
+
+        <p class="school-attribution">
+          Daniel, Primary School Teacher · The unpublished manuscript was read aloud to pupils,
+          who were then invited to create their own illustrations of Lizzie and her world.
+        </p>
+
+        <p class="drawings-eyebrow">✦ Illustrated by the children of Livingston Village Primary School ✦</p>
+
+        <div class="drawings-grid">
+          <div class="drawing-frame">
+            <img src="drawing-1.jpg" alt="A child's drawing of Lizzie the fox" loading="lazy">
+          </div>
+          <div class="drawing-frame">
+            <img src="drawing-2.jpg" alt="A child's drawing of Lizzie beneath the oak tree" loading="lazy">
+          </div>
+          <div class="drawing-frame">
+            <img src="drawing-3.jpg" alt="A child's drawing of Lizzie in Hyde Park" loading="lazy">
+          </div>
+          <div class="drawing-frame">
+            <img src="drawing-4.jpg" alt="A child's drawing of Lizzie with stars" loading="lazy">
+          </div>
+          <div class="drawing-frame">
+            <img src="drawing-5.jpg" alt="A child's storyboard of Lizzie" loading="lazy">
+          </div>
+          <div class="drawing-frame">
+            <img src="drawing-6.jpg" alt="A child's drawing of Lizzie with white-tipped tail" loading="lazy">
+          </div>
+        </div>
+
+        <p class="drawings-caption">
+          Original drawings created by pupils after hearing the unpublished manuscript read aloud ·
+          Published with permission of the school
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-label">Get in Touch</div>
